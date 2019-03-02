@@ -1,10 +1,15 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import Header from './Header';
+import Meta from './Meta';
+import styled from 'styled-components';
+
 
  class Page extends Component {
   render() {
     return (
       <div>
-          <p> Hey I'm the page component </p>
+        <Meta/>
+        <Header />
         {this.props.children}
       </div>
     )
