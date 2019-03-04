@@ -8,5 +8,5 @@
 
  type Query {
      items: [Item]!
-     item(where: ItemWhereUniqueInput!) Item
+     item(where: ItemWhereUniqueInput!): Item
  }
