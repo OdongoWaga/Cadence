@@ -181,7 +181,7 @@ var Meta = function Meta() {
       lineNumber: 9
     },
     __self: this
-  }, "Slick!"));
+  }, "Cadence"));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Meta);
