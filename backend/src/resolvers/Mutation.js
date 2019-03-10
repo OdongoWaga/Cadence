@@ -220,7 +220,7 @@ const Mutations = {
          },
        });
      //3. Check if the ite is already in their cart and increment by 1 if it is 
-     if(existingcartItem) {
+     if(existingCartItem) {
        console.log('This item is already in the cart');
        return ctx.db.mutation.updateCartItem(
          {
