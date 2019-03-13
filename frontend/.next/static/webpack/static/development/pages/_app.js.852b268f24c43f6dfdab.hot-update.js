@@ -1,9 +1,9 @@
 webpackHotUpdate("static\\development\\pages\\_app.js",{
 
-/***/ "./components/Stripe.js":
-/*!******************************!*\
-  !*** ./components/Stripe.js ***!
-  \******************************/
+/***/ "./components/TakeMyMoney.js":
+/*!***********************************!*\
+  !*** ./components/TakeMyMoney.js ***!
+  \***********************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -29,7 +29,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ErrorMessage__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./ErrorMessage */ "./components/ErrorMessage.js");
 /* harmony import */ var _User__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./User */ "./components/User.js");
 
-var _jsxFileName = "C:\\Users\\user\\Desktop\\WorkSpace\\sickfits\\frontend\\components\\Stripe.js";
+var _jsxFileName = "C:\\Users\\user\\Desktop\\WorkSpace\\sickfits\\frontend\\components\\TakeMyMoney.js";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -56,7 +56,7 @@ function _assertThisInitialized(self) { if (self === void 0) { throw new Referen
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\nmutation createOrder($token: String!){\n  createOrder(token: $token) {\n    id\n    charge\n    total\n    items {\n      id\n      title\n    }\n  }\n}"]);
+  var data = _taggedTemplateLiteral(["\n  mutation createOrder($token: String!) {\n    createOrder(token: $token) {\n      id\n      charge\n      total\n      items {\n        id\n        title\n      }\n    }\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -85,23 +85,23 @@ function totalItems(cart) {
   }, 0);
 }
 
-var Stripe =
+var TakeMyMoney =
 /*#__PURE__*/
 function (_React$Component) {
-  _inherits(Stripe, _React$Component);
+  _inherits(TakeMyMoney, _React$Component);
 
-  function Stripe() {
+  function TakeMyMoney() {
     var _getPrototypeOf2;
 
     var _this;
 
-    _classCallCheck(this, Stripe);
+    _classCallCheck(this, TakeMyMoney);
 
     for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
       args[_key] = arguments[_key];
     }
 
-    _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(Stripe)).call.apply(_getPrototypeOf2, [this].concat(args)));
+    _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(TakeMyMoney)).call.apply(_getPrototypeOf2, [this].concat(args)));
 
     _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "onToken",
     /*#__PURE__*/
@@ -114,10 +114,11 @@ function (_React$Component) {
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
+                nprogress__WEBPACK_IMPORTED_MODULE_5___default.a.start();
                 console.log('On Token Called!');
-                console.log(res.id); //Manually call the mutation once we have the stripe token
+                console.log(res.id); // manually call the mutation once we have the stripe token
 
-                _context.next = 4;
+                _context.next = 5;
                 return createOrder({
                   variables: {
                     token: res.id
@@ -126,10 +127,16 @@ function (_React$Component) {
                   alert(err.message);
                 });
 
-              case 4:
-                order = _context.sent;
-
               case 5:
+                order = _context.sent;
+                next_router__WEBPACK_IMPORTED_MODULE_4___default.a.push({
+                  pathname: '/order',
+                  query: {
+                    id: order.data.createOrder.id
+                  }
+                });
+
+              case 7:
               case "end":
                 return _context.stop();
             }
@@ -145,7 +152,7 @@ function (_React$Component) {
     return _this;
   }
 
-  _createClass(Stripe, [{
+  _createClass(TakeMyMoney, [{
     key: "render",
     value: function render() {
       var _this2 = this;
@@ -153,7 +160,7 @@ function (_React$Component) {
       return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_User__WEBPACK_IMPORTED_MODULE_10__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 46
+          lineNumber: 50
         },
         __self: this
       }, function (_ref2) {
@@ -165,16 +172,16 @@ function (_React$Component) {
           }],
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 48
+            lineNumber: 52
           },
           __self: this
         }, function (createOrder) {
           return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_stripe_checkout__WEBPACK_IMPORTED_MODULE_2___default.a, {
             amount: Object(_lib_calcTotalPrice__WEBPACK_IMPORTED_MODULE_8__["default"])(me.cart),
-            name: "cadence",
+            name: "Sick Fits",
             description: "Order of ".concat(totalItems(me.cart), " items!"),
-            image: me.cart[0].item && me.cart[0].item.image,
-            stripeKey: "pk_test_TL3wgcfvy1IcOZWbdoaIEZU2",
+            image: me.cart.length && me.cart[0].item && me.cart[0].item.image,
+            stripeKey: "pk_test_Vtknn6vSdcZWSG2JWvEiWSqC",
             currency: "USD",
             email: me.email,
             token: function token(res) {
@@ -182,7 +189,7 @@ function (_React$Component) {
             },
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 51
+              lineNumber: 57
             },
             __self: this
           }, _this2.props.children);
@@ -191,12 +198,12 @@ function (_React$Component) {
     }
   }]);
 
-  return Stripe;
+  return TakeMyMoney;
 }(react__WEBPACK_IMPORTED_MODULE_1___default.a.Component);
 
-/* harmony default export */ __webpack_exports__["default"] = (Stripe);
+/* harmony default export */ __webpack_exports__["default"] = (TakeMyMoney);
 
 /***/ })
 
 })
-//# sourceMappingURL=_app.js.05c644831908369660e4.hot-update.js.map
+//# sourceMappingURL=_app.js.852b268f24c43f6dfdab.hot-update.js.map
