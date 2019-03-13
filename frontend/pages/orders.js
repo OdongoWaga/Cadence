@@ -4,7 +4,7 @@ import OrderList from '../components/OrderList';
 const OrderPage = props => (
   <div>
     <PleaseSignIn>
-      <OrderList id={props.query.id} />
+      <OrderList />
     </PleaseSignIn>
   </div>
 );
