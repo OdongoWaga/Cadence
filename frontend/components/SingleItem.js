@@ -68,3 +68,4 @@ const SINGLE_ITEM_QUERY = gql`
 
 
 export default SingleItem;
+export {SINGLE_ITEM_QUERY}; 
