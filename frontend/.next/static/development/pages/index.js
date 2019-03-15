@@ -581,11 +581,12 @@ function (_Component) {
 /*!**********************************!*\
   !*** ./components/Pagination.js ***!
   \**********************************/
-/*! exports provided: default */
+/*! exports provided: default, PAGINATION_QUERY */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PAGINATION_QUERY", function() { return PAGINATION_QUERY; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _styles_PaginationStyles__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./styles/PaginationStyles */ "./components/styles/PaginationStyles.js");
@@ -720,6 +721,7 @@ var Pagination = function Pagination(props) {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Pagination);
+
 
 /***/ }),
 
