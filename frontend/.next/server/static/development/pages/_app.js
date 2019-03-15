@@ -120,7 +120,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _CartItem__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./CartItem */ "./components/CartItem.js");
 /* harmony import */ var _lib_calcTotalPrice__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../lib/calcTotalPrice */ "./lib/calcTotalPrice.js");
 /* harmony import */ var _lib_formatMoney__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../lib/formatMoney */ "./lib/formatMoney.js");
-/* harmony import */ var _TakeMyMoney__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./TakeMyMoney */ "./components/TakeMyMoney.js");
+/* harmony import */ var _TakeMyMoney__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./TakeMyMoney */ "./components/TakeMyMoney.js");
 var _jsxFileName = "C:\\Users\\user\\Desktop\\WorkSpace\\sickfits\\frontend\\components\\Cart.js";
 
 function _templateObject2() {
@@ -272,7 +272,7 @@ var Cart = function Cart() {
         lineNumber: 52
       },
       __self: this
-    }, Object(_lib_formatMoney__WEBPACK_IMPORTED_MODULE_11__["default"])(Object(_lib_calcTotalPrice__WEBPACK_IMPORTED_MODULE_10__["default"])(me.cart))), me.cart.length && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_TakeMyMoney__WEBPACK_IMPORTED_MODULE_13__["default"], {
+    }, Object(_lib_formatMoney__WEBPACK_IMPORTED_MODULE_11__["default"])(Object(_lib_calcTotalPrice__WEBPACK_IMPORTED_MODULE_10__["default"])(me.cart))), me.cart.length && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_TakeMyMoney__WEBPACK_IMPORTED_MODULE_12__["default"], {
       __source: {
         fileName: _jsxFileName,
         lineNumber: 54
