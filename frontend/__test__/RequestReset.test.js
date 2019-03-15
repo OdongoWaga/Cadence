@@ -8,7 +8,7 @@ const mocks = [
   {
     request: {
       query: REQUEST_RESET_MUTATION,
-      variables: { email: 'wesbos@gmail.com' },
+      variables: { email: 'wagaodongo@gmail.com' },
     },
     result: {
       data: { requestReset: { message: 'success', __typename: 'Message' } },
